@@ -163,12 +163,16 @@ function finishQuiz() {
     document.getElementById('total-correct').textContent = totalCorrect;
     document.getElementById('total-incorrect').textContent = totalIncorrect;
 
-    // Mostrar u ocultar mensaje "Felicitaciones" si es mayor a 70%
+    // Mostrar u ocultar mensaje según el puntaje (70% o más supera el reto)
     const congratsBanner = document.getElementById('congrats-message');
-    if (percentage > 70) {
+    const failureBanner = document.getElementById('failure-message');
+
+    if (percentage >= 70) {
         congratsBanner.classList.remove('hidden');
+        if (failureBanner) failureBanner.classList.add('hidden');
     } else {
         congratsBanner.classList.add('hidden');
+        if (failureBanner) failureBanner.classList.remove('hidden');
     }
 
     // Renderizar lista de preguntas acertadas

@@ -22,7 +22,8 @@
             <section id="quiz-section">
                 <div class="instructions">
                     Lee cada pregunta y decide si la respuesta proviene de una <strong>IA</strong> o de una
-                    <strong>Persona</strong>. Tienes <strong>60 segundos</strong>.
+                    <strong>Persona</strong>. Cada seleccion vale 10 puntos, en caso de no seleccionar nada se toma como
+                    error. Tienes <strong>60 segundos</strong>.
                 </div>
 
                 <div id="questions-list">
@@ -38,6 +39,10 @@
                 <div class="results-card">
                     <div id="congrats-message" class="congrats-banner hidden">
                         🎉 ¡Felicitaciones, lograste identificar a la IA! 🎉
+                    </div>
+
+                    <div id="failure-message" class="failure-banner hidden">
+                        😢 Lo siento, fuiste engañado por la IA 😢
                     </div>
 
                     <div class="score-display">
