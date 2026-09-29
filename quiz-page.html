@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: ¿IA o Persona?</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <header>
+            <h1>Reto: ¿IA o Persona?</h1>
+            <div class="timer-badge" id="timer-badge">
+                ⏱️ <span id="timer-seconds">60s</span>
+            </div>
+        </header>
+
+        <div class="content">
+            <section id="quiz-section">
+                <div class="instructions">
+                    Lee cada pregunta y decide si la respuesta proviene de una <strong>IA</strong> o de una
+                    <strong>Persona</strong>. Tienes <strong>60 segundos</strong>.
+                </div>
+
+                <div id="questions-list">
+                </div>
+
+                <div class="actions-bar">
+                    <button type="button" class="btn-primary" id="btn-submit">
+                        Finalizar y Enviar
+                    </button>
+                </div>
+            </section>
+            <section id="results-section" class="hidden">
+                <div class="results-card">
+                    <div id="congrats-message" class="congrats-banner hidden">
+                        🎉 ¡Felicitaciones, lograste identificar a la IA! 🎉
+                    </div>
+
+                    <div class="score-display">
+                        Puntuación: <span id="score-percentage">0%</span>
+                    </div>
+
+                    <div class="breakdown-box">
+                        <div class="breakdown-item text-success">
+                            <strong>Total Aciertos: <span id="total-correct">0</span> / 10</strong>
+                            <div>Preguntas acertadas: <span id="correct-questions-list" class="badge-list">-</span>
+                            </div>
+                        </div>
+                        <hr style="margin: 12px 0; border: none; border-top: 1px solid #e2e8f0;">
+                        <div class="breakdown-item text-error">
+                            <strong>Total Fallos: <span id="total-incorrect">0</span> / 10</strong>
+                            <div>Preguntas falladas: <span id="incorrect-questions-list" class="badge-list">-</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn-primary" id="btn-restart">
+                        Intentar de Nuevo
+                    </button>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
