@@ -6,11 +6,14 @@ Lightweight, interactive, and portable web application to evaluate the ability t
 
 ## Key Features
 
-- **Welcome Screen (`index.html`)**: Introduction with quick instructions, 60s timer indicator, placeholder for logo, and start button.
-- **Interactive Quiz (`quiz-page.html`)**: 10 single-choice questions with a 60-second countdown timer.
+- **Welcome Screen (`index.html`)**: Introduction with quick instructions, 90s timer indicator, placeholder for logo, and start button.
+- **Interactive Quiz (`quiz-page.html`)**: 10 single-choice questions with a 90-second countdown timer.
 - **Instant Evaluation**:
+  - Each correct answer is worth 10 points, a 70% for success, if no answer selected it is counted as incorrect, this means *0 points*
   - Score percentage calculation (`%`).
-  - Conditional message: **"🎉 ¡Felicitaciones, lograste identificar a la IA! 🎉"** for scores above 70%.
+  - Conditional message: 
+    - **🎉 ¡Felicitaciones, lograste identificar a la IA! 🎉** for scores above 70%.
+    - **😢 Lo siento, fuiste engañado por la IA 😢** for scores below 70%.
   - Detailed breakdown with numbers of correct (green) and incorrect (red) questions.
   - Option to restart the test.
 - **Responsive Design**: Color palette in blue (`#003366`) and yellow (`#fff9db`, `#ffd43b`) tones.
@@ -123,7 +126,7 @@ If your machine does not have any of the options above, you can install the one 
 
 ---
 
-## 💻 3. Execution and Deployment Instructions
+## 3. Execution and Deployment Instructions
 
 ### Option A: With Python 3 (Recommended)
 ```bash
@@ -173,6 +176,6 @@ Place your image file (e.g. `logo.png`) in the root of the project and edit `ind
 ```
 
 ### 2. Modify Questions or Time
-In [app.js](file:///home/lety/Educational/quiz/app.js):
+In [app.js](./app.js):
 - **Questions**: Edit the `questionsData` array.
 - **Time limit**: Modify the constant `const TOTAL_TIME = 60;` (in seconds).

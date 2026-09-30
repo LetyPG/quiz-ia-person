@@ -63,7 +63,7 @@ const questionsData = [
 ];
 
 // Variables de estado del temporizador y quiz
-const TOTAL_TIME = 60;
+const TOTAL_TIME = 90;
 let timeLeft = TOTAL_TIME;
 let timerInterval = null;
 let isQuizFinished = false;
